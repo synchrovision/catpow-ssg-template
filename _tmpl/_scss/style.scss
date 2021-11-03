@@ -1,0 +1,14 @@
+.example{
+	&-article{
+		&-header{
+			&__title{
+			}
+		}
+		&-contents{
+			&__heading{
+			}
+			&__text{
+			}
+		}
+	}
+}

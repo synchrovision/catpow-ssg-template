@@ -1,0 +1,3 @@
+[submodule "_compiler"]
+	path = _compiler
+	url = https://github.com/synchrovision/catpow-ssg.git
