@@ -1,0 +1,40 @@
+.site{
+	&-body{
+		>.script{
+		}
+		>.link{
+		}
+	}
+	&-header{
+		>.logo{
+			>.img{
+			}
+		}
+		>.nav{
+		}
+	}
+	&-main{
+	}
+	&-footer{
+		>.logo{
+			>.img{
+			}
+		}
+		>.nav{
+		}
+	}
+}
+.page{
+	&-article{
+		&-header{
+			>.title{
+			}
+		}
+		&-contents{
+			>.heading{
+			}
+			>.text{
+			}
+		}
+	}
+}

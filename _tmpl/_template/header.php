@@ -5,8 +5,7 @@ $title="{$page->title}|{$site->title}";
 $site_image='/images/site_image.jpg';
 $desc=$page->desc?:'サイトの説明文';
 $locale=$page->locale??'ja-JP';
-$site_sec=BEM::section('site');
-$page_sec=BEM::section('page');
+$page_sec=RSCSS::section('page');
 enqueue_style('css/style.css');
 enqueue_script('js/script.js');
 enqueue_style('/css/common.css');
@@ -18,6 +17,7 @@ enqueue_script('/js/common.js');
 <meta charset="UTF-8">
 <title><?=$title?></title>
 <meta name="description" content="<?=$desc?>">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=1"> 
 
 <meta property="og:url" content="<?=$url?>">
 <meta property="og:title" content="<?=$title?>"/>
@@ -32,12 +32,10 @@ enqueue_script('/js/common.js');
 <meta name="twitter:image" content="<?=$site_image?>" />
 
 </head>
-<body>
 <?php ob_start(); ?>
-	<header class="header_">
-		<div class="_logo"><img src="/images/logo.png" alt=""></div>
-		<div class="_nav"></div>
+<body class="site-body">
+	<header class="site-header">
+		<div class="logo"><img src="/images/logo.png" alt=""></div>
+		<div class="nav"></div>
 	</header>
-<?=$site_sec->apply(ob_get_clean());?>
-<?php ob_start(); ?>
 	<main class="site-main">
