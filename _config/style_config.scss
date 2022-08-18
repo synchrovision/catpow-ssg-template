@@ -1,21 +1,9 @@
 @charset "utf-8";
 @import "catpow.scss";
 
-$sizeUnit:.1rem;
-
-$selectors:(
-	m:'body .site_main .page_main .page_content',
-	e:'body.mce-content-body,.gutenberg .editor-block-list__layout',
-	u:'#profile-page,#cpcf_custom_box .inside'
-);
+$sizeUnit:.0625rem;
 
 $gothic:(noto-sans-cjk-jp, sans-serif);
-
-$heading_font:$gothic;
-$text_font:$gothic;
-$caption_font:$gothic;
-$decoration_font:$gothic;
-$strong_font:$gothic;
 
 $st:60%;
 $lt:60%;
@@ -34,42 +22,25 @@ $colors:(
 	11:hsl(300,$st,$lt),
 	12:hsl(330,$st,$lt),
 	a:#d9aab9,
-	at:rgba(#a82248,40%),
 	m:#c9bc9c,
-	mt:rgba(#805e0c,40%),
 	b:#fff,
-	b2:#f8f8f8,
+	s:#f8f8f8,
 	t:#666,
 	i:#fff,
 	lt:rgba(255,255,255,.8),
 	sh:rgba(0,0,0,.1),
 	shd:rgba(0,0,0,.2),
 	n:transparent,
-	hs:#172374,
-	ms:#fc1563,
-	ks:#f67597,
-	sq:#db9f24,
-	bb:#522887,
-	kc:#97ad70
-);
-
-$images:(
-	logo:'images/logo.png',
-	bg:'images/bg.png',
 );
 
 $fonts:(
-	g:(noto-sans-cjk-jp, sans-serif),
+	g:$gothic,
 	m:$mincho,
-	e:(imperial-urw, sans-serif),
-	h:$heading_font,
-	t:$text_font,
-	c:$caption_font,
-	d:$decoration_font,
-	s:$strong_font,
-);
-
-$sizes:(
+	h:$gothic,
+	t:$gothic,
+	c:$gothic,
+	d:$gothic,
+	s:$gothic,
 );
 
 $breakpoints:(
