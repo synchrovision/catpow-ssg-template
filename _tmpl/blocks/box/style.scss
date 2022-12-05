@@ -1,0 +1,10 @@
+@import 'style_config.scss';
+
+.block{
+	&-box{
+		@include bnd((ox:a));
+		&__body{
+			@include bnd((d:b,pd:80 40,w:a 1200,mg:a));
+		}
+	}
+}
