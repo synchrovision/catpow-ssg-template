@@ -44,10 +44,17 @@ $fonts:(
 );
 
 $breakpoints:(
-	1:'min-width:640px',
-	2:'min-width:960px',
-	3:'min-width:1280px',
-	-1:'max-width:639px',
-	-2:'max-width:959px',
-	-3:'max-width:1279px',
+	+fhd:'min-width:1921px',
+	-fhd:'max-width:1920px',
+	+hd:'min-width:1281px',
+	-hd:'max-width:1280px',
+	+xga:'min-width:1025px',
+	-xga:'max-width:1024px',
+	+vga:'min-width:641px',
+	-vga:'max-width:640px',
+	+pc:'min-width:961px',
+	-pc:'max-width:960px',
+	+sp:'min-width:481px',
+	-sp:'max-width:480px',
+	d:'prefers-color-scheme: dark'
 );
