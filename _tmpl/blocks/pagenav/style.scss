@@ -1,0 +1,27 @@
+@import 'style_config.scss';
+
+.block{
+	&-pagenav{
+		@include bg((c:s));
+		&-items{
+			@include bnd((d:b,w:a 1200,mg:a,pd:20));
+			@include flx((w:w,j:c,g:20));
+			&-item{
+				@include txt((l:n,p:18));
+				@include trn((t:.2s));
+				&__link{
+					@include bnd((d:b,pd:5));
+					@include txt((c:t));
+					&::before{
+						content:'arrow_drop_down';
+						@include bnd((d:ib,mgr:.25em));
+						@include txt((f:i));
+					}
+					&:hover{
+						@include txt((c:m));
+					}
+				}
+			}
+		}
+	}
+}
