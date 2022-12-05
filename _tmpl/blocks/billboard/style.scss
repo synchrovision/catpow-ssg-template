@@ -1,0 +1,72 @@
+@import 'style_config.scss';
+
+.block{
+	&-billboard{
+		@include bnd((p:r,z:1,pd:80 20));
+		@include flx((w:w,ac:c));
+		&-header{
+			@include bnd((p:r,pd:20,z:1,f:1 1 f));
+			@include flx((w:w,d:c,g:40,j:c));
+			@include txt((a:c,p:24,h:2em,c:i,b:k));
+			@include shd((t:10));
+			&-title{
+				@include txt((p:4em,h:1.5em,t:.05em));
+			}
+			&-lead{
+				@include txt((p:1em,w:b));
+			}
+		}
+		&-body{
+			@include bnd((p:r,pd:20,z:1,f:1 1 f));
+			&-contents{
+				@include bnd((w:fit,mg:a));
+				@include txt((p:16,h:2em,c:i));
+				@include shd((t:10));
+			}
+			&-buttons{
+				@include bnd((mg:40 a 0));
+				@include flx((w:w,j:c,g:20));
+				@include txt((l:n));
+				&-item{
+					@include bnd((p:r,f:0 1 300));
+					&-button{
+						@include bnd((d:b,pd:.5em 1.5em));
+						@include bdr((s:s,w:3,r:1.5em));
+						@include txt((a:c,p:24,w:b,h:1em));
+						@include shd((b:10));
+						@include trn((t:.2s,s:1));
+						&:hover{
+							@include shd((b:15));
+							@include trn((s:1.05));
+						}
+						&::after{
+							content:'arrow_forward';
+							@include bnd((d:b,p:a,i:0,w:1em,h:1em,mg:a,mgr:.5em));
+							@include txt((f:i));
+						}
+					}
+					&.is-primary &{
+						&-button{
+							@include bg((c:m));
+							@include txt((c:i));
+						}
+					}
+					&.is-secondary &{
+						&-button{
+							@include bg((c:b));
+							@include txt((c:m));
+						}
+					}
+				}
+			}
+		}
+		&-bg{
+			@include bnd((p:f,i:0,t:calc(var(--parallax-t) * 1px),b:calc(var(--parallax-b) * 1px),w:f,z:0,o:h));
+			&__picture{
+				&-img{
+					@include bnd((d:b,p:a,i:0,t:calc(var(--parallax-t) * -.6px),w:100vw,h:calc(40% + 60vh),op:c,of:c));
+				}
+			}
+		}
+	}
+}
