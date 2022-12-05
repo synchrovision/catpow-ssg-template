@@ -1,0 +1,27 @@
+@import 'style_config.scss';
+
+.block{
+	&-section{
+		@include bnd((d:b,p:r));
+		&-anchor{
+			@include bnd((d:b,p:r,t:-80,v:h));
+		}
+		&-header{
+			@include bnd((d:b,mg:a,pd:80 20));
+			@include bg((c:m 10));
+			&-title{
+				@include txt((a:c,p:18,h:1.5em));
+				&__alt{
+					@include bnd((d:b,mgt:.4em));
+					@include txt((p:4em,f:e));
+				}
+			}
+			&-lead{
+				@include bnd((mgt:40));
+				@include txt((a:c,p:16,h:2em));
+			}
+		}
+		&-body{
+		}
+	}
+}
