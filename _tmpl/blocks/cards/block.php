@@ -3,7 +3,7 @@ namespace Catpow;
 ?>
 <ul class="<?=$className?>-">
 	<?php foreach($items as $item): ?>
-	<li class="-item<?=empty($item['link'])?'':' has-link'?>">
+	<li class="-item<?=empty($item['link'])?'':' has-link'?> <?=$item['className']?>">
 		<div class="-header">
 			<h3 class="-title">
 				<?=$item['title']?>
