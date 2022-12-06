@@ -1,12 +1,9 @@
 <?php namespace Catpow; ?>
 	</main>
-	<footer class="site-footer">
-		<div class="logo"><img src="/images/logo.png" alt=""></div>
-		<div class="nav"></div>
-	</footer>
-<?php $page->render_deps(); ?>
+	<footer class="site-footer-" id="SiteFooter"></footer>
+	<?php $page->render_deps(); ?>
 </body>
-<?=$page_sec->apply(do_shortcode(ob_get_clean()));?>
+<?=$bem->apply(do_shortcode(ob_get_clean()));?>
 </html>
 <?php
-$page_sec->export_selectors_file();
+$bem->export_selectors_file();

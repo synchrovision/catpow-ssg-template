@@ -1,15 +1,15 @@
 <?php
 namespace Catpow;
 $url=$site->uri.$page->uri;
-$title="{$page->title}|{$site->title}";
-$site_image='/images/site_image.jpg';
-$desc=$page->desc?:'サイトの説明文';
+$title="{$page->title}｜{$site->title}";
+$ogp_image=$site->url.'/images/ogp_image.jpg';
+$desc=$page->desc?:$site->desc;
 $locale=$page->locale??'ja-JP';
-$page_sec=RSCSS::section('page');
+$bem=WPBEM::section('page');
+enqueue_style('/css/common.css',null,['materialicons']);
+enqueue_script('/js/common.js',null,['react']);
 enqueue_style('css/style.css');
-enqueue_script('js/script.js');
-enqueue_style('/css/common.css');
-enqueue_script('/js/common.js');
+enqueue_script('js/script.js',null,['react']);
 ?>
 <!doctype html>
 <html>
@@ -23,19 +23,18 @@ enqueue_script('/js/common.js');
 <meta property="og:title" content="<?=$title?>"/>
 <meta property="og:type" content="website">
 <meta property="og:locale" content="<?=$locale?>">
-<meta property="og:image" content="<?=$site_image?>">
+<meta property="og:image" content="<?=$ogp_image?>">
 <meta property="og:description" content="<?=$desc?>"/>
 
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="<?=$title?>" />
 <meta name="twitter:description" content="<?=$desc?>" />
-<meta name="twitter:image" content="<?=$site_image?>" />
+<meta name="twitter:image" content="<?=$ogp_image?>" />
 
+<?php $page->render_deps(); ?>
 </head>
 <?php ob_start(); ?>
-<body class="site-body">
-	<header class="site-header">
-		<div class="logo"><img src="/images/logo.png" alt=""></div>
-		<div class="nav"></div>
-	</header>
-	<main class="site-main">
+<body class="site-body-">
+	<div class="site-cloak-" id="SiteCloak"></div>
+	<header class="site-header-" id="SiteHeader"></header>
+	<main class="site-main-">
