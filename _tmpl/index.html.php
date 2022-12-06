@@ -1,14 +1,25 @@
 <?php
 namespace Catpow;
+$sections=csv('home-sections')->dict('id');
 include TMPL_DIR.'/_template/header.php';
 ?>
-<article class="article-">
-	<header class="-header-">
-		<h2 class="title">タイトル</h2>
-	</header>
-	<div class="-contents-">
-		<h3 class="heading">見出し</h3>
-		<div class="text">本文</div>
-	</div>
-</article>
+<?=block('billboard',csv('home-billboard')->items[0])?>
+<?=block('pagenav',['items'=>$sections])?>
+<?=block('section',$sections['news'],function($props){ ?>
+	<?=block('box',[],function($props){ ?>
+		<?=block('news',['json'=>'/json/news.json'])?>
+		<?=block('ui/button',['label'=>'もっと見る','href'=>'/news/'])?>
+	<?php }); ?>
+<?php }); ?>
+<?=block('section',$sections['concept'],function($props){ ?>
+	<?=block('dimension',[],function($props){ ?>
+		<?=block('dimension/box')?>
+		<?=block('dimension/contents',['layer'=>9],function($props){ ?>
+			<?=block('cards',['items'=>csv('concept-sections')->items])?>
+		<?php }); ?>
+	<?php }); ?>
+<?php }); ?>
+<?=block('section',$sections['feature'],function($props){ ?>
+	<?=block('cards',['items'=>csv('feature-sections')->items])?>
+<?php }); ?>
 <?php include TMPL_DIR.'/_template/footer.php';?>
