@@ -1,0 +1,9 @@
+id,title,alt,className,lead,text,link
+simple,簡単,simple,,"PHPがわかれば
+大丈夫",CatpowSSGはPHPの出力をHTMLにするというシンプルな仕組み。単にパーツの共通化などの簡単な用途であれば、独自のテンプレートタグを利用する必要もなく、PHPのコードさえ読み書きできれば使えます。,/concept/#simple
+flexible,柔軟,flexible,,"ルールは
+強制されません",CatpowSSGのコーディングにルールはありません。単に用意されたやり方もあるというだけで、その利用は強制されません。自分のルール、サイトのルールでコーディングができます。,/concept/#flexible
+coexistence,共存,coexistence,,"設定されていないなら
+何もしません",CatpowSSGは基本的にファイルへのリクエストをトリガーにして処理を実行します。サイト内の全ファイルを監視して自動で何かをしたりしません。すべてのページにテンプレートが存在する必要はなく、対応するテンプレートが存在しないファイルへのリクエストに対しては何もしません。,/concept/#coexistence
+efficiency,効率,efficiency,,"コンテンツと設定の
+管理はCSVで",CatpowSSGはCSVのデータの利用が得意です。スプレッドシート等でテキスト等を管理し、CSVにしてテンプレートで読み込めるようにしておくことで、静的ページの更新を効率的に行うことができます。,/concept/#efficiency

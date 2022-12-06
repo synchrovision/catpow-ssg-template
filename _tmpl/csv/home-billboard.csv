@@ -1,0 +1,5 @@
+title,lead,bg,contents,primary_link,primary_link_url,secondary_link,secondary_link_url
+Catpow SSG,"シンプルで自由な
+静的サイト制作ツール",images/page_header_pc.jpg,"CatpowSSGはPHPを使った静的サイト生成ツールです。
+既存のサイトのHTMLのコードを活かしながら、
+コンテンツ管理を効率化することを目的に作られました。",Get Started,https://github.com/synchrovision/catpow-ssg-template,View Docs,https://github.com/synchrovision/catpow-ssg-template
