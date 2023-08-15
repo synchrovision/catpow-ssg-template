@@ -1,2 +1,2 @@
-url,title,desc,copyright
-http://example.com,Catpow SSG,This is example description,Copyright Ⓒ2022 synchro vision
+url,title,use_relative_path,desc,copyright
+http://example.com,Catpow SSG,TRUE,This is example description,Copyright Ⓒ2022 synchro vision

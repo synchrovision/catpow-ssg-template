@@ -30,8 +30,10 @@ enqueue_script('js/script.js',null,['react']);
 <meta name="twitter:title" content="<?=$title?>" />
 <meta name="twitter:description" content="<?=$desc?>" />
 <meta name="twitter:image" content="<?=$ogp_image?>" />
-
+	
+<script>window.path_to_root="<?=$page->path_to_root?>"</script>
 <?php $page->render_deps(); ?>
+
 </head>
 <?php ob_start(); ?>
 <body class="site-body-">
