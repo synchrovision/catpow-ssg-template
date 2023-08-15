@@ -1,5 +1,4 @@
 import {Cloak} from 'component';
-import siteinfo from '../../json/site.json';
 import {bem} from 'util';
 
 export const SiteCloak=(props)=>{
@@ -12,11 +11,12 @@ export const SiteCloak=(props)=>{
 	const onComplete=useCallback(()=>{
 		ref.current.parentElement.classList.add('is-complete');
 	},[]);
+	const rewriteURL=useCallback((url)=>(url[0]==='/')?window.path_to_root+url.substr(1):url,[]);
 	
 	return (
 		<div className={classes._body()} ref={ref}>
 			<Cloak className={loaderClasses()} onComplete={onComplete}>
-				<img className={loaderClasses.logo()} src="/images/logo.svg" alt={siteinfo.title}/>
+				<img className={loaderClasses.logo()} src={rewriteURL("/images/logo.svg")} alt=""/>
 			</Cloak>
 		</div>
 	);
