@@ -1,0 +1,9 @@
+id,title,alt,className,lead
+news,新着情報,What’s New,,"このお知らせはReactのコンポーネントで作成されています。
+読み込まれるjsonはcsvから生成されています。"
+concept,コンセプト,Concept,,"このセクションはdimensionのブロックを使って作成されています。
+blockのテンプレートに流し込まれるテキストは
+csvから読み込まれるようになっています。"
+feature,機能,Feature,,"このセクションはcardのブロックを使って作成されています。
+blockのテンプレートに流し込まれるテキストは
+csvから読み込まれるようになっています。"

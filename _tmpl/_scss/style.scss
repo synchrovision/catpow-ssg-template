@@ -1,0 +1,90 @@
+@import 'style_config.scss';
+
+.page{
+	&-mv{
+		@include bnd((d:b,p:r));
+		&__body{
+			@include bnd((p:r,w:f,h:a,z:1));
+			@include usr((c:p));
+			@include txt((p:32));
+		}
+	}
+	&-article{
+	}
+	&-header{
+		&__title{
+		}
+	}
+	&-contents{
+		&-heading{
+		}
+		&-text{
+			&__caption{
+			}
+		}
+	}
+}
+
+.cp{
+	&-news{
+		@include bnd((d:b,pd:20,mg:a,w:a 800));
+		&-nav{
+			@include bnd((pd:20 0));
+			@include flx((w:w));
+			@include txt((l:n));
+			&-item{
+				@include bnd((p:r,pd:12,f:1 1 160,o:h));
+				@include bg((c:s));
+				@include txt((a:c,p:18,h:1em,c:t));
+				@include trn((t:.5s));
+				@include usr((c:p));
+				&::before{
+					content:'';
+					@include bnd((d:b,p:a,i:0 -25%,z:0));
+					@include bg((c:var(--cat-color,clr(1))));
+					@include trn((t:.5s,x:-100%,kx:-30deg));
+				}
+				&__label{
+					@include bnd((p:r,z:1));
+				}
+				&:hover{
+					@include txt((c:i));
+					&::before{
+						@include trn((x:0,kx:-30deg));
+					}
+				}
+				&.is-active{
+					@include bg((c:var(--cat-color,clr(1))));
+					@include txt((c:i));
+				}
+			}
+		}
+		&-items{
+			@include txt((l:n));
+			&-item{
+				@include bdr((p:b,s:s,w:1));
+				@include trn((t:.2s));
+				&:hover{
+					@include bg((c:s));
+				}
+				&-cat{
+					@include bnd((f:0 0 100,pd:6));
+					@include bg((c:var(--cat-color,clr(1))));
+					@include txt((a:c,p:15,h:1em,c:i));
+				}
+				&-date{
+					@include bnd((f:0 0 100,pd:6));
+					@include txt((p:15,h:1em));
+				}
+				&-title{
+					@include bnd((f:1 1 300));
+				}
+				&__link{
+					@include bnd((pd:16 0));
+					@include flx((w:w,g:10));
+					@include txt((p:18,c:t));
+				}
+			}
+		}
+	}
+}

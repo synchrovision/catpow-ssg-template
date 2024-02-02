@@ -1,0 +1,5 @@
+uri,title,alt,slug,primary_menu,header_menu,footer_menu,desc
+/,ホーム,Home,home,FALSE,TRUE,TRUE,This is example description
+/concept/,コンセプト,Concept,concept,FALSE,TRUE,TRUE,This is example description
+/feature/,機能,Feature,feature,FALSE,TRUE,TRUE,This is example description
+https://github.com/synchrovision,GitHub,GitHub,github,TRUE,FALSE,FALSE,This is example description

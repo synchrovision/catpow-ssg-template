@@ -1,0 +1,62 @@
+@charset "utf-8";
+@import "catpow.scss";
+
+$sizeUnit:.0625rem;
+
+$gothic:(noto-sans-cjk-jp, sans-serif);
+
+$st:60%;
+$lt:60%;
+
+$colors:(
+	1:hsl(0,$st,$lt),
+	2:hsl(30,$st,$lt),
+	3:hsl(60,$st,$lt),
+	4:hsl(90,$st,$lt),
+	5:hsl(120,$st,$lt),
+	6:hsl(150,$st,$lt),
+	7:hsl(180,$st,$lt),
+	8:hsl(210,$st,$lt),
+	9:hsl(240,$st,$lt),
+	10:hsl(270,$st,$lt),
+	11:hsl(300,$st,$lt),
+	12:hsl(330,$st,$lt),
+	a:#E55A08,
+	m:#E07D00,
+	b:#fff,
+	s:#f8f8f8,
+	t:#666,
+	i:#fff,
+	lt:rgba(255,255,255,.8),
+	sh:rgba(0,0,0,.1),
+	shd:rgba(0,0,0,.2),
+	n:transparent,
+);
+
+$fonts:(
+	g:$gothic,
+	m:$mincho,
+	h:$gothic,
+	t:$gothic,
+	c:$gothic,
+	d:$gothic,
+	s:$gothic,
+	e:'Arial',
+	i:'Material Icons'
+);
+
+$breakpoints:(
+	+fhd:'min-width:1921px',
+	-fhd:'max-width:1920px',
+	+hd:'min-width:1281px',
+	-hd:'max-width:1280px',
+	+xga:'min-width:1025px',
+	-xga:'max-width:1024px',
+	+vga:'min-width:641px',
+	-vga:'max-width:640px',
+	+pc:'min-width:961px',
+	-pc:'max-width:960px',
+	+sp:'min-width:481px',
+	-sp:'max-width:480px',
+	d:'prefers-color-scheme: dark'
+);

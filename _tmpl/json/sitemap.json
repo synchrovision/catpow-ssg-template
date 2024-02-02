@@ -1,0 +1,42 @@
+{
+    "/": {
+        "uri": "/",
+        "title": "ホーム",
+        "alt": "Home",
+        "slug": "home",
+        "primary_menu": false,
+        "header_menu": true,
+        "footer_menu": true,
+        "desc": "This is example description"
+    },
+    "/concept/": {
+        "uri": "/concept/",
+        "title": "コンセプト",
+        "alt": "Concept",
+        "slug": "concept",
+        "primary_menu": false,
+        "header_menu": true,
+        "footer_menu": true,
+        "desc": "This is example description"
+    },
+    "/feature/": {
+        "uri": "/feature/",
+        "title": "機能",
+        "alt": "Feature",
+        "slug": "feature",
+        "primary_menu": false,
+        "header_menu": true,
+        "footer_menu": true,
+        "desc": "This is example description"
+    },
+    "https://github.com/synchrovision": {
+        "uri": "https://github.com/synchrovision",
+        "title": "GitHub",
+        "alt": "GitHub",
+        "slug": "github",
+        "primary_menu": true,
+        "header_menu": false,
+        "footer_menu": false,
+        "desc": "This is example description"
+    }
+}

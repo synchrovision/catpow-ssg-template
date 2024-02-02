@@ -1,0 +1,7 @@
+id,title,alt,className,lead,text,link
+html,HTML,PHP BEM CSV,is-color9,"PHPの出力から
+HTMLを生成",リクエストされたHTMLに対応するPHPのテンプレートの出力をそのままHTMLファイルにするシンプルなコード生成。,/feature#html
+css,CSS,SCSS ScssPHP,is-color5,"リクエスト時に
+SCSSをコンパイル",リクエストされたCSSに対応するSCSSがあればコンパイル、監視プロセスによる更新の発見を待つことはありません。,/feature#css
+js,JS,JSX webpack React,is-color1,"リクエスト時に
+JSXをコンパイル",リクエストされたJSに対応するJSXがあればコンパイル、監視プロセスによる更新の発見を待つことはありません。,/feature#js

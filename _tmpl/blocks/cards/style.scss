@@ -1,0 +1,65 @@
+@import 'style_config.scss';
+
+.block{
+	&-cards{
+		@include bnd((pd:5em 2em));
+		@include txt((p:16,l:n));
+		&-item{
+			@include bnd((f:0 1 400,mgt:5em));
+			@include flx((w:w));
+			@include bdr((r:20));
+			@include bg((c:b));
+			@include trn((t:.2s));
+			@include shd((b:4));
+			&-header{
+				@include bnd((pd:20,f:1 1 200));
+				@include txt((a:c));
+				&-title{
+					@include bnd((pd:2em 0,mg:a,mgt:-3em,w:5em,h:5em,bs:b));
+					@include bg((c:var(--color)));
+					@include bdr((r:50%));
+					@include txt((p:1.5em,h:1em,c:i));
+					@include shd((b:2));
+				}
+				&-alt{
+					@include bnd((pd:1em 0));
+					@include txt((p:1.2em,f:e));
+				}
+				&-lead{
+					@include txt((p:1.5em,c:var(--color),w:b));
+				}
+			}
+			&-body{
+				@include bnd((pd:30,f:10 10 300));
+				@include flx((w:n,d:c,g:30));
+				&-text{
+					@include bnd((f:1 1 a));
+				}
+				&-link{
+					@include bnd((d:b,p:r,w:f 400,pd:.25em 2em,mg:a,bs:b));
+					@include bdr((r:1em));
+					@include bg((c:var(--color)));
+					@include txt((a:c,p:20,w:b,c:i));
+					@include shd((b:1));
+					&::after{
+						content:'arrow_forward';
+						@include bnd((d:p,p:a,i:0,w:1em,h:1em,mg:a,mgr:.5em));
+						@include txt((f:i));
+					}
+				}
+			}
+		}
+		@include bp(+hd){
+			@include flx((w:n,j:c,g:20));
+			&-item{
+				@include flx((d:c));
+				&-header{
+					@include bnd((f:1 1 100));
+				}
+				&-body{
+					@include bnd((f:10 10 100));
+				}
+			}
+		}
+	}
+}

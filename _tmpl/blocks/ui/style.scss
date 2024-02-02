@@ -1,0 +1,27 @@
+@import 'style_config.scss';
+
+.block{
+	&-ui{
+		&-button{
+			@include bnd((d:b,p:r,w:200 a 300,pd:20 40,mg:40 a,o:h));
+			@include bg((c:s));
+			@include txt((a:c,p:20,h:1em,c:t));
+			@include trn((t:.5s));
+			&::before{
+				content:'';
+				@include bnd((d:b,p:a,i:0 -25%,z:0));
+				@include bg((c:m));
+				@include trn((t:.5s,x:-100%,kx:-30deg));
+			}
+			&__label{
+				@include bnd((p:r,z:1));
+			}
+			&:hover{
+				@include txt((c:i));
+				&::before{
+					@include trn((x:0,kx:-30deg));
+				}
+			}
+		}
+	}
+}

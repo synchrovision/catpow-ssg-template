@@ -1,0 +1,79 @@
+@import 'style_config.scss';
+
+.block{
+	&-dimension{
+		&__body{
+			@include bnd((w:f));
+			@include trn((p:100vmax));
+		}
+		&-roof{
+			@include bnd((p:a,t:0,l:0,r:0,w:100vw,h:100vw));
+			@include bg((c:m));
+			@include trn((rx:-90deg,to:top));
+		}
+		&-floor{
+			@include bnd((p:a,b:0,l:0,r:0,w:100vw,h:100vw));
+			@include bg((c:m));
+			@include trn((rx:90deg,to:bottom));
+		}
+		&-box{
+			&-top,&-bottom,&-left,&-right,&-front{
+				@include bnd((p:a,l:0,r:0,w:100vw));
+			}
+			&-top,&-bottom{
+				@include bnd((h:100vw));
+			}
+			&-top{
+				@include bnd((t:0));
+				@include bg((c:t 15));
+				@include trn((rx:-90deg,to:top));
+			}
+			&-bottom{
+				@include bnd((b:0));
+				@include bg((c:b));
+				@include trn((rx:90deg,to:bottom));
+			}
+			&-left,&-right,&-front{
+				@include bnd((t:0,h:f));
+			}
+			&-left{
+				@include bg((c:t 10));
+				@include trn((ry:90deg,to:left));
+			}
+			&-right{
+				@include bg((c:t 10));
+				@include trn((ry:-90deg,to:right));
+			}
+			&-front{
+				@include bg((c:t 5));
+				@include trn((z:-100vw));
+			}
+		}
+		&-layer{
+			@include bnd((p:a,i:0));
+		}
+		&-layer,&-contents{
+			@for $i from 1 through 10{
+				&.is-layer-#{$i}{
+					@include trn((z:($i - 10) * 10vw));
+				}
+			}
+		}
+		&-items{
+			@include bnd((w:f,mg:80 a));
+			@include flx((w:w));
+			&-item{
+				@include bnd((d:b,pd:60 20,mg:a,f:0 0 50%,bs:b));
+				@include txt((a:c,p:48,h:1em,c:i));
+				&:nth-child(odd){
+					@include bg((c:m 90));
+					@include trn((ry:-45deg,to:right));
+				}
+				&:nth-child(even){
+					@include bg((c:m 110));
+					@include trn((ry:45deg,to:left));
+				}
+			}
+		}
+	}
+}
