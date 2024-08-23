@@ -2,6 +2,7 @@ import {bem,getTreeData} from 'util';
 
 export const SiteFooter=(props)=>{
 	const {className='site-footer',data}=props;
+	const {site,sitemap}=data;
 	const {Fragment,useState,useMemo,useCallback}=React;
 	const classes=bem(className);
 	const menuClasses=classes.footermenu;
@@ -28,7 +29,7 @@ export const SiteFooter=(props)=>{
 				</li>
 			))}
 			</ul>
-			<div className={classes.copyright()}>{siteinfo.copyright}</div>
+			<div className={classes.copyright()}>{site.copyright}</div>
 		</div>
 	);
 };
