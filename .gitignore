@@ -2,3 +2,5 @@ node_modules
 _notes
 .gitignore
 /*
+!/_tmpl
+!/_config
