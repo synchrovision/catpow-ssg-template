@@ -1,0 +1,23 @@
+{
+	"properties":{
+		"items":{
+			"items":{
+				"className":{"type":"string"},
+				"image":{"type":"string"},
+				"title":{"type":"html"},
+				"text":{"type":"html"},
+				"link":{"type":"string"}
+			}
+		},
+		"item":{
+			"key":"items[]",
+			"properties":{
+				"className":{"type":"string"},
+				"image":{"type":"string"},
+				"title":{"type":"html"},
+				"text":{"type":"html"},
+				"link":{"type":"string"}
+			}
+		}
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"properties": {
+		"className": { "type": "string" },
+		"items": {
+			"items": {
+				"properties": {
+					"className": { "type": "string" },
+					"title": { "type": "string" },
+					"alt": { "type": "string" },
+					"lead": { "type": "string" },
+					"link": { "type": "string" },
+					"linkText": { "type": "string" }
+				}
+			}
+		}
+	}
+}

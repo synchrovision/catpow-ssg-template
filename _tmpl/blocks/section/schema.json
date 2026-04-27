@@ -1,0 +1,10 @@
+{
+	"properties": {
+		"id": { "type": "string" },
+		"className": { "type": "string" },
+		"level": { "type": "integer" },
+		"title": { "type": "string" },
+		"alt": { "type": "string" },
+		"lead": { "type": "html" }
+	}
+}

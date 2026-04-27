@@ -1,5 +1,5 @@
-import {dimensionBox} from 'util';
+import { dimensionBox } from "catpow/util";
 
-window.addEventListener('DOMContentLoaded',function(){
-	document.querySelectorAll('.block-dimension').forEach(dimensionBox);
+window.addEventListener("DOMContentLoaded", function () {
+	document.querySelectorAll(".block-dimension").forEach(dimensionBox);
 });

@@ -16,7 +16,7 @@
 				&::before{
 					content:'';
 					@include bnd((d:b,p:a,i:0 -25%,z:0));
-					@include bg((c:var(--cat-color,clr(1))));
+					@include bg((c:var(--cat-color,clr(m1))));
 					@include trn((t:.5s,x:-100%,kx:-30deg));
 				}
 				&__label{

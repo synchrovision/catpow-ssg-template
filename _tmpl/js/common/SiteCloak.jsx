@@ -1,23 +1,23 @@
-import {Cloak} from 'component';
-import {bem} from 'util';
+import { Bem, Cloak } from "catpow/component";
+import { useCallback, useRef } from "react";
 
-export const SiteCloak=(props)=>{
-	const {className='site-cloak'}=props;
-	const {useMemo,useState,useCallback,useRef,useEffect}=React;
-	const classes=useMemo(()=>bem(className));
-	const loaderClasses=classes.loader;
-	
-	const ref=useRef();
-	const onComplete=useCallback(()=>{
-		ref.current.parentElement.classList.add('is-complete');
-	},[]);
-	const rewriteURL=useCallback((url)=>(url[0]==='/')?window.path_to_root+url.substr(1):url,[]);
-	
+import siteinfo from "../../json/site.json";
+
+export const SiteCloak = (props) => {
+	const { className = "site-cloak" } = props;
+	const ref = useRef();
+
+	const onComplete = useCallback(() => {
+		ref.current?.parentElement?.classList?.add("is-complete");
+	}, []);
+
 	return (
-		<div className={classes._body()} ref={ref}>
-			<Cloak className={loaderClasses()} onComplete={onComplete}>
-				<img className={loaderClasses.logo()} src={rewriteURL("/images/logo.svg")} alt=""/>
-			</Cloak>
-		</div>
+		<Bem block={className}>
+			<div className="_body" ref={ref}>
+				<Cloak className="-loader" onComplete={onComplete}>
+					<img className="_logo" src="/images/logo.svg" alt={siteinfo.title} />
+				</Cloak>
+			</div>
+		</Bem>
 	);
 };

@@ -1,0 +1,42 @@
+@import "style_config.scss";
+.block-index{
+	@include bnd((c:300,pd:2em));
+	&,&-subitems,&-subitems-enditems{
+		&__item{
+			@include bnd((bi:a));
+			@include txt((l:n));
+			&-link{
+				@include txt((c:t));
+			}
+		}
+	}
+	&__item{
+		&-link{
+			@include bnd((pdl:.5em,mgb:.5em));
+			@include bdr((p:l,s:s,w:.2em,c:m));
+			@include txt((p:20,w:b));
+		}
+	}
+	&-subitems{
+		@include bnd((pd:1em 0 1em 1em));
+		&__item{
+			&-link{
+				@include bnd((d:b,p:r,pdl:.75em));
+				@include txt((w:b));
+				&::before{
+					content:'';
+					@include bnd((d:b,p:a,w:.25em,h:.5em,t:.5em,l:0));
+					@include bg((c:m));
+					@include clp((t:r 100%));
+				}
+			}
+		}
+		&-enditems{
+			@include bnd((pd:.25em 0 .5em 1em));
+			&__item{
+				&-link{
+				}
+			}
+		}
+	}
+}

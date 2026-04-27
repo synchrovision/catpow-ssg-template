@@ -1,0 +1,20 @@
+@import 'style_config.scss';
+
+.block-defs{
+	$block:&;
+	@include grd((rc:480,g:1em));
+	@include txt((p:14));
+	&__item{
+		@include grd((tc:180 1fr,g:.1em));
+		&-key,&-value{
+			@include bnd((pd:.5em));
+		}
+		&-key{
+			@include bg((c:s));
+			@include txt((a:l,w:b));
+		}
+		&-value{
+			@include bg((c:s 1 .5));
+		}
+	}
+}

@@ -1,0 +1,33 @@
+@import 'style_config.scss';
+
+.block-flows{
+	$block:&;
+	@include bnd((pd:3em 1em,mg:0 a,w:a 90%));
+	&__item{
+		&+&{
+			@include bnd((mgt:2em));
+		}
+		&-header{
+			@include bnd((mgb:1em));
+			&-title{
+				@include flx((w:w,g:.5em,a:c));
+				@include txt((p:24,w:b,c:m));
+				&-prefix{
+					@include bnd((d:b,pd:.25em 1em,ac:c,f:0 0 a));
+					@include bdr((r:1em));
+					@include bg((c:m));
+					@include txt((p:1.1em,h:1em,t:.05em,c:i,w:b,f:e));
+					&-number{
+						@include txt((p:1.25em));
+					}
+				}
+				&-text{
+					@include bnd((f:1 1 300,pdl:20));
+				}
+			}
+		}
+		&-body{
+			@include bnd((pdl:20));
+		}
+	}
+}

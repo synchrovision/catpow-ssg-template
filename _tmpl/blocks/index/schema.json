@@ -1,0 +1,26 @@
+{
+	"properties": {
+		"item": {
+			"key": "items[]",
+			"properties": {
+				"title": { "type": "string" },
+				"href": { "type": "string" },
+				"item": {
+					"key": "items[]",
+					"properties": {
+						"title": { "type": "string" },
+						"href": { "type": "string" },
+						"item": {
+							"key": "items[]",
+							"emptyElement": true,
+							"properties": {
+								"title": { "type": "string" },
+								"href": { "type": "string" }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

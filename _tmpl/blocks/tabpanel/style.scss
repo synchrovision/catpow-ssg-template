@@ -1,0 +1,22 @@
+@import "style_config.scss";
+.block-tabpanel{
+	@include bnd((w:c,mg:40 a));
+	&__tabs{
+		@include flx((w:n));
+		@include txt((a:c,l:n,p:18));
+		&-tab{
+			@include bnd((f:1 1 a,pd:.5em));
+			@include bdr((s:s,w:1,c:t,r:.4em .4em 0 0));
+			@include bg((c:s));
+			@include usr((c:p));
+			&[aria-selected="true"]{
+				@include bdr((p:b,s:n));
+				@include bg((c:b));
+			}
+		}
+	}
+	&__panels{
+		@include bdr((s:s,w:1,c:t,r:0 0 .4em .4em));
+		@include bdr((p:t,s:n));
+	}
+}

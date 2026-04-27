@@ -1,0 +1,23 @@
+{
+	"properties": {
+		"className": { "type": "string" },
+		"title": { "type": "html" },
+		"lead": { "type": "html" },
+		"contents": { "type": "html" },
+		"primary-link": {
+			"emptyElement": true,
+			"properties": {
+				"title": { "type": "string" },
+				"href": { "type": "string" }
+			}
+		},
+		"secondary-link": {
+			"emptyElement": true,
+			"properties": {
+				"title": { "type": "string" },
+				"href": { "type": "string" }
+			}
+		},
+		"bg": { "type": "string" }
+	}
+}

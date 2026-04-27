@@ -1,47 +1,53 @@
 @charset "utf-8";
 @import "catpow.scss";
 
-$sizeUnit:.0625rem;
-
-$gothic:(noto-sans-cjk-jp, sans-serif);
-
-$st:60%;
-$lt:60%;
+$siz-unit:.0625rem;
 
 $colors:(
-	1:hsl(0,$st,$lt),
-	2:hsl(30,$st,$lt),
-	3:hsl(60,$st,$lt),
-	4:hsl(90,$st,$lt),
-	5:hsl(120,$st,$lt),
-	6:hsl(150,$st,$lt),
-	7:hsl(180,$st,$lt),
-	8:hsl(210,$st,$lt),
-	9:hsl(240,$st,$lt),
-	10:hsl(270,$st,$lt),
-	11:hsl(300,$st,$lt),
-	12:hsl(330,$st,$lt),
+	//accent & main
 	a:#E55A08,
 	m:#E07D00,
+
+	//background & sheet
 	b:#fff,
 	s:#f8f8f8,
+
+	//text & inverted
 	t:#666,
 	i:#fff,
+
+	//line & rules
+	l:#666,
+	r:#fff,
+
+	//emphasiz & highlight
+	e:#E55A08,
+	h:#E07D00,
+
+	//light & lust
 	lt:rgba(255,255,255,.8),
+	lst:rgba(255,255,255,.8),
+
+	//shadow & shade
 	sh:rgba(0,0,0,.1),
 	shd:rgba(0,0,0,.2),
+	
 	n:transparent,
 );
 
-$fonts:(
+$mincho:("Noto Serif JP", serif);
+$gothic:("Noto Sans JP", sans-serif);
+
+$font-families:(
 	g:$gothic,
 	m:$mincho,
 	h:$gothic,
-	t:$gothic,
+	l:$gothic,
+	p:$gothic,
 	c:$gothic,
 	d:$gothic,
 	s:$gothic,
-	e:'Arial',
+	e:("Roboto", sans-serif),
 	i:'Material Icons'
 );
 

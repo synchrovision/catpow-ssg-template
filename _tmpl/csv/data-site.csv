@@ -1,2 +1,2 @@
-url,title,useRelativePath,debugMode,useGlobalReact,runHtmlAsPhp,desc,copyright
-http://example.com,Catpow SSG,TRUE,TRUE,TRUE,FALSE,This is example description,Copyright Ⓒ2022 synchro vision
+url,title,desc,copyright
+http://example.com,Catpow SSG,This is example description,Copyright Ⓒ2022 synchro vision

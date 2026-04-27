@@ -17,6 +17,7 @@
 			@include trn((rx:90deg,to:bottom));
 		}
 		&-box{
+			@include bnd((d:c));
 			&-top,&-bottom,&-left,&-right,&-front{
 				@include bnd((p:a,l:0,r:0,w:100vw));
 			}

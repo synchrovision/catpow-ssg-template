@@ -1,0 +1,7 @@
+{
+	"emptyElement": true,
+	"properties": {
+		"className": { "type": "string" },
+		"json": { "type": "string" }
+	}
+}

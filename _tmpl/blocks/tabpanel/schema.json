@@ -1,0 +1,10 @@
+{
+	"properties": {
+		"panel": {
+			"key": "panels[]",
+			"properties": {
+				"title": { "type": "string" }
+			}
+		}
+	}
+}

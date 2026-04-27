@@ -1,0 +1,51 @@
+@import 'style_config.scss';
+
+.block{
+	&-sphere{
+		@include bnd((pd:5em 2em,w:a 1200,mg:a));
+		@include txt((p:16,l:n));
+		@include flx((w:w,j:c,g:32));
+		&-item{
+			@include bnd((p:r,f:0 0 360,h:360,o:h));
+			@include flx((d:c));
+			@include bdr((r:50%));
+			@include bg((c:b));
+			@include trn((t:.2s));
+			@include shd((b:2));
+			@include trn((t:.5s,s:1));
+			&:hover{
+				@include trn((s:1.05));
+				@include shd((b:12));
+			}
+			&-image{
+				@include bnd((p:r,f:1 1 30%,mgb:-20));
+				&__img{
+					@include bnd((d:b,p:a,i:0,w:f,h:f,op:c,of:c));
+				}
+			}
+			&-texts{
+				@include bnd((p:r,f:1 1 30%,pd:1em));
+				@include bg((c:var(--color)));
+				@include txt((a:c,c:i));
+				&__alt{
+					@include bnd((d:b,w:fit,h:fit,mg:-1.5em a 0,pd:.25em 1em));
+					@include bg((c:b));
+					@include bdr((s:s,w:4,r:1em));
+					@include txt((p:20,h:1em,w:b,f:e,c:var(--color),b:k));
+				}
+				&__title{
+					@include bnd((mg:.5em a));
+					@include txt((a:c,p:24,h:1em,c:i));
+				}
+				&__text{
+					@include bnd((pd:0 2em));
+					@include txt((p:11,b:k));
+				}
+			}
+			&-link{
+				@include bnd((d:b,p:a,i:0));
+				@include usr((c:p));
+			}
+		}
+	}
+}

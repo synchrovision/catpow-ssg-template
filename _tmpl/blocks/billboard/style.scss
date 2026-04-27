@@ -2,26 +2,28 @@
 
 .block{
 	&-billboard{
-		@include bnd((p:r,z:1,pd:80 20));
+		@include bnd((p:r,z:1,pd:80 20,h:500 100vh 1000,bs:b));
 		@include flx((w:w,ac:c));
+		@include clp((i:0));
 		&-header{
 			@include bnd((p:r,pd:20,z:1,f:1 1 f));
 			@include flx((w:w,d:c,g:40,j:c));
 			@include txt((a:c,p:24,h:2em,c:i,b:k));
-			@include shd((t:10));
+			@include trn((shd:0px 8px 12px #{clr(shd)}));
 			&-title{
-				@include txt((p:4em,h:1.5em,t:.05em));
+				@include bg((g:l 60deg m m3,cl:t));
+				@include txt((p:5em,h:1.5em,f:e,w:h,t:.05em,c:n));
 			}
 			&-lead{
-				@include txt((p:1em,w:b));
+				@include txt((p:1em,w:b,c:m));
 			}
 		}
 		&-body{
 			@include bnd((p:r,pd:20,z:1,f:1 1 f));
+			@include trn((shd:0px 4px 6px #{clr(shd)}));
 			&-contents{
 				@include bnd((w:fit,mg:a));
-				@include txt((p:16,h:2em,c:i));
-				@include shd((t:10));
+				@include txt((p:16,h:2em,c:t));
 			}
 			&-buttons{
 				@include bnd((mg:40 a 0));
@@ -61,10 +63,10 @@
 			}
 		}
 		&-bg{
-			@include bnd((p:f,i:0,t:calc(var(--parallax-t) * 1px),b:calc(var(--parallax-b) * 1px),w:f,z:0,o:h));
+			@include bnd((d:b,p:f,i:0,w:f,h:f));
 			&__picture{
 				&-img{
-					@include bnd((d:b,p:a,i:0,t:calc(var(--parallax-t) * -.6px),w:100vw,h:calc(40% + 60vh),op:c,of:c));
+					@include bnd((d:b,p:a,i:0,w:f,h:f,op:c,of:c));
 				}
 			}
 		}

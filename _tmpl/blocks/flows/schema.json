@@ -1,0 +1,10 @@
+{
+	"properties": {
+		"item": {
+			"key": "items[]",
+			"properties": {
+				"title": { "type": "string" }
+			}
+		}
+	}
+}

@@ -1,26 +1,15 @@
 @import 'style_config.scss';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 @include default_break;
 
 html{
-	@include txt((c:t,f:g));
-	scroll-behavior:smooth;
-	@include bp(-pc){
-		@include txt((p:1.6vw));
-	}
-	@include bp(-sp){
-		@include txt((p:3.2vw));
-	}
+	@include bnd((sb:s,spdt:100));
+	@include txt((p:min(4vw,16px),c:t,f:g));
 }
 
-:root{
-	--color:#{clr(m)};
-}
-@for $i from 1 through 12{
-	.is-color#{$i}{
-		--color:#{clr($i)};
-	}
-}
+@include define-color-vars($colors);
+@include define-color-classes($colors);
 
 .site{
 	&-cloak{
@@ -38,7 +27,7 @@ html{
 			&-timer{
 				@include bnd((d:b,w:50,h:50,mg:a));
 				@include bdr((s:s,w:2,c:t 20,r:50%));
-				@include bdr((p:t,c:m));
+				@include bdr((p:t,c:m_0));
 			}
 			&-logo{
 				@include bnd((d:b,w:100,h:a,mg:40 a 0));

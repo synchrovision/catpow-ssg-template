@@ -1,0 +1,13 @@
+{
+	"properties": {
+		"className": { "type": "string" },
+		"items": {
+			"items": {
+				"properties": {
+					"id": { "type": "string" },
+					"title": { "type": "string" }
+				}
+			}
+		}
+	}
+}

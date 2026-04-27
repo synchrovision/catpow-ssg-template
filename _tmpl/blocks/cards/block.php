@@ -14,7 +14,7 @@ namespace Catpow;
 		<div class="-body">
 			<div class="-text"><?=nl2br(rtf($item['text']))?></div>
 			<?php if($item['link']): ?>
-			<a href="<?=$item['link']?>" class="-link"><?=$item['link_text']??'もっと詳しく'?></a>
+			<a href="<?=$item['link']?>" class="-link"><?=$item['linkText']??'もっと詳しく'?></a>
 			<?php endif; ?>
 		</div>
 	</li>
